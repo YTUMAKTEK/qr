@@ -12,6 +12,15 @@
       --btn-pad-x: 22px;     /* yatay padding */
       --radius: 14px;
     }
+    :root{
+  --scale: 1;               /* varsayılan: masaüstü */
+  --btn-w:   calc(520px * var(--scale));
+  --btn-h:   calc(72px  * var(--scale));
+  --btn-font:calc(20px  * var(--scale));
+  --radius:  calc(14px  * var(--scale));
+  --pad-x:   calc(24px  * var(--scale));
+  --gap:     var(--btn-h);
+}
 
     body{
       margin:0; min-height:100svh; display:grid; place-items:center;
@@ -43,6 +52,9 @@
     .whatsapp{ background:#25D366; }
     .instagram{ background: linear-gradient(45deg,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4); }
     .form{ background:#f39c12; }
+    @media (max-width:480px){
+        :root{ --scale: 1.5; }
+  }
   </style>
 </head>
 <body>
