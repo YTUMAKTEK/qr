@@ -4,48 +4,68 @@
   <meta charset="UTF-8">
   <title>Katılım Linkleri</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f7f6;
-      padding: 50px;
+     body{
+      font-family: Arial, sans-serif; text-align:center; background:#f4f7f6; padding:48px;
     }
-    h1 {
-      color: #245953;
+    h1{ color:#245953; margin-bottom:8px }
+    p{ color:#3b5251; margin-top:0 }
+
+    /* Ortak buton stili */
+    .button{
+      display:inline-flex; align-items:center; gap:10px;
+      margin:10px; padding:14px 22px; font-size:18px; font-weight:600;
+      color:#fff; text-decoration:none; border-radius:10px; transition:.25s;
+      box-shadow: 0 6px 14px rgba(0,0,0,.08);
     }
-    .button {
-      display: inline-block;
-      margin: 15px;
-      padding: 15px 30px;
-      font-size: 18px;
-      text-decoration: none;
-      color: #fff;
-      border-radius: 8px;
-      transition: 0.3s;
+    .button:hover{ transform:translateY(-1px); opacity:.95 }
+
+    /* Simge */
+    .icon{ font-size:1.2em; line-height:0 }
+
+    /* Renkler */
+    .whatsapp{ background:#25D366; }
+    .instagram{
+      background: linear-gradient(45deg,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4);
     }
-    .whatsapp {
-      background-color: #25D366;
-    }
-    .form {
-      background-color: #f39c12;
-    }
-    .button:hover {
-      opacity: 0.8;
-    }
+    .form{ background:#f39c12; }
   </style>
 </head>
 <body>
   <h1>Hoş Geldiniz!</h1>
-  <p>Aşağıdaki bağlantılardan istediğinizi seçebilirsiniz:</p>
+  <p>Aşağıdaki bağlantılardan istediğinizi seçebilirsiniz.</p>
+    <!-- (İstersen) Form -->
+    <a class="button form" href="https://forms.office.com/r/fnUEdxLBa5" target="_blank" rel="noopener">
+        📝 Formu Doldur
+      </a>
 
-  <!-- WhatsApp Grup Linki -->
-  <a class="button whatsapp" href="https://chat.whatsapp.com/XXXXXX" target="_blank">
-    WhatsApp Grubuna Katıl
+  <!-- WhatsApp -->
+  <a class="button whatsapp" href="https://chat.whatsapp.com/GJ891ZPBHysBYy0IaIbYOR?mode=ems_share_t" target="_blank" rel="noopener">
+    <span class="icon">💬</span> WhatsApp Grubuna Katıl
   </a>
 
-  <!-- Form Linki -->
-  <a class="button form" href="https://forms.office.com/Pages/ResponsePage.aspx?id=CClghVvhukORSDi8dzqBboCcYYaIo15MuaKruYcYgjxUMFgwTkVNQlZPUzdBV1hMU0ZEMUU3NTIzWC4u" target="_blank">
-    Formu Doldur
+  <!-- Instagram 1 – Takım hesabı -->
+  <a class="button instagram" href="https://instagram.com/ytumaktek" target="_blank" rel="noopener">
+    <span class="icon">📸</span> Instagram – YTU MAKTEK
   </a>
+
+  <!-- Instagram 2 – Etkinlik duyuruları -->
+  <a class="button instagram" href="https://instagram.com/yturacing" target="_blank" rel="noopener">
+    <span class="icon">📸</span> Instagram – YTU Racing
+  </a>
+
+  <!-- Instagram 3 – Sponsor paylaşımları -->
+  <a class="button instagram" href="https://instagram.com/yildizroket" target="_blank" rel="noopener">
+    <span class="icon">📸</span> Instagram – Yıldız Roket
+  </a>
+    <!-- Instagram 3 – Sponsor paylaşımları -->
+    <a class="button instagram" href="https://instagram.com/ytusigmaaero" target="_blank" rel="noopener">
+        <span class="icon">📸</span> Instagram – YTU Sigma Aeronautics
+      </a>
+      <!-- Instagram 3 – Sponsor paylaşımları -->
+  <a class="button instagram" href="https://instagram.com/astridotonom" target="_blank" rel="noopener">
+    <span class="icon">📸</span> Instagram – YTU Astrid Otonom Araç
+  </a>
+
+
 </body>
 </html>
