@@ -4,35 +4,50 @@
   <meta charset="UTF-8">
   <title>Katılım Linkleri</title>
   <style>
-     body{
-      font-family: Arial, sans-serif; text-align:center; background:#f4f7f6; padding:48px;
+    :root{
+      /* Tek yerden boyut ayarı */
+      --btn-width: 460px;    /* buton genişliği (max) */
+      --btn-font: 20px;      /* yazı boyutu */
+      --btn-pad-y: 16px;     /* dikey padding */
+      --btn-pad-x: 22px;     /* yatay padding */
+      --radius: 14px;
     }
-    h1{ color:#245953; margin-bottom:8px }
-    p{ color:#3b5251; margin-top:0 }
 
-    /* Ortak buton stili */
+    body{
+      margin:0; min-height:100svh; display:grid; place-items:center;
+      background:#f4f7f6; font-family:Arial, sans-serif; color:#245953; padding:24px;
+    }
+    h1{margin:0 0 6px} p{margin:0 0 20px; color:#3b5251}
+
+    /* Dikey liste, ortalanmış */
+    .links{
+      display:flex; flex-direction:column; align-items:center; gap:1px;
+      width:100%;
+    }
+
+    /* “Kutucuk” buton */
     .button{
-      display:inline-flex; align-items:center; gap:10px;
-      margin:10px; padding:14px 22px; font-size:18px; font-weight:600;
-      color:#fff; text-decoration:none; border-radius:10px; transition:.25s;
-      box-shadow: 0 6px 14px rgba(0,0,0,.08);
+      width:min(var(--btn-width), 92vw);   /* uzun şerit değil, kutu gibi */
+      padding: var(--btn-pad-y) var(--btn-pad-x);
+      border-radius: var(--radius);
+      font-size: var(--btn-font); font-weight:700;
+      color:#fff; text-decoration:none;
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      box-shadow:0 10px 22px rgba(0,0,0,.08);
+      transition:.22s ease;
     }
-    .button:hover{ transform:translateY(-1px); opacity:.95 }
+    .button:hover{ transform:translateY(-1px); opacity:.97 }
+    .icon{ font-size:1.25em; line-height:0 }
 
-    /* Simge */
-    .icon{ font-size:1.2em; line-height:0 }
-
-    /* Renkler */
+    /* Renk temaları */
     .whatsapp{ background:#25D366; }
-    .instagram{
-      background: linear-gradient(45deg,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4);
-    }
+    .instagram{ background: linear-gradient(45deg,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4); }
     .form{ background:#f39c12; }
   </style>
 </head>
 <body>
   <h1>Hoş Geldiniz!</h1>
-  <p>Aşağıdaki bağlantılardan istediğinizi seçebilirsiniz.</p>
+  <p>Aşağıdaki bağlantılardan kulübümze kayıt olabilir veya bize ulaşabilirsiniz.</p>
     <!-- (İstersen) Form -->
     <a class="button form" href="https://forms.office.com/r/fnUEdxLBa5" target="_blank" rel="noopener">
         📝 Formu Doldur
