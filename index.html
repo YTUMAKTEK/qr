@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Katılım Linkleri</title>
+  <link rel="stylesheet" href="styles.css" />
+
   <style>
     :root{
       /* Tek yerden boyut ayarı */
@@ -11,6 +13,7 @@
       --btn-pad-y: 16px;     /* dikey padding */
       --btn-pad-x: 22px;     /* yatay padding */
       --radius: 14px;
+      --scale: 1;
     }
 
     body{
@@ -43,11 +46,19 @@
     .whatsapp{ background:#25D366; }
     .instagram{ background: linear-gradient(45deg,#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4); }
     .form{ background:#f39c12; }
+    @media (max-width:480px){
+        .scalewrap{transform: scale(1.5);}
+    }
+    .intro{ text-align:center; }
+
   </style>
 </head>
 <body>
+<div class="page">
+  <div class="scale-wrap intro">
   <h1>Hoş Geldiniz!</h1>
-  <p>Aşağıdaki bağlantılardan kulübümze kayıt olabilir veya bize ulaşabilirsiniz.</p>
+  <p>Aşağıdaki bağlantılardan kulübümüze kayıt olabilir veya bize ulaşabilirsiniz.</p>
+  <div class="links">
     <!-- (İstersen) Form -->
     <a class="button form" href="https://forms.office.com/r/fnUEdxLBa5" target="_blank" rel="noopener">
         📝 Formu Doldur
@@ -80,7 +91,9 @@
   <a class="button instagram" href="https://instagram.com/astridotonom" target="_blank" rel="noopener">
     <span class="icon">📸</span> Instagram – YTU Astrid Otonom Araç
   </a>
-
+</div>
+</div>
+</div>
 
 </body>
 </html>
